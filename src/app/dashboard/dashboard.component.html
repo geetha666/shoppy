@@ -1,0 +1,144 @@
+<app-header></app-header>
+
+<div class="container pt-5">
+<div class="row gx-5">
+  <app-sidebar class="col-4"></app-sidebar>
+  <div class="col-8">
+
+
+
+    <!-- <form class="form-inline my-2 my-lg-0 col-lg-5 col-sm-5">
+      <input class="form-control mr-sm-2 d-inline-block" [(ngModel)]="name"   name="pass" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn text-white my-2 my-sm-0 d-inline-block" type="submit" (click)="search()">Search</button>
+    </form>
+    <div class="row gx-5">
+<div class="col-lg-4 col-md-6 col-sm-6">
+<div class="card p-2">
+  <img src="{{obj.img}}" class="card-img-top p-3" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{obj.gender}}</h5>
+    <p class="card-text">{{obj.name.title}}</p>
+    <p class="card-text">{{obj.name.first}}</p>
+    <h6 class="card-title">{{obj.location.street.number}}</h6>
+    <a href="#" class="btn-primary" (click)="showdress(obj.name)">show more</a>
+  </div>
+  </div>
+</div>
+</div> -->
+
+
+<!-- <div *ngIf="resp">
+  <h4>{{resp.name}}</h4>
+  <h3>{{resp.count}}</h3>
+  <h5>{{resp.age}}</h5>
+</div>
+
+<div *ngFor="let obj of data">
+  <h2>{{obj["ID Nation"]}}</h2>
+  <h3>{{obj.Nation}}</h3>
+  <h4>{{obj.Nation}}</h4>
+  <h5>{{obj.Year}}</h5>
+  <h6>{{obj.Population}}</h6>
+</div> -->
+<!-- 
+<form class="form-inline my-2 my-lg-0 col-lg-5 col-sm-5">
+  <input class="form-control mr-sm-2 d-inline-block" [(ngModel)]="id"   name="pass" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn text-white my-2 my-sm-0 d-inline-block" type="submit" (click)="searchid()">Search</button>
+</form>
+<div *ngIf="resdata">
+  <h2>{{resdata.id}}</h2>
+  <h3>{{resdata.name}}</h3>
+  <h4>{{resdata.email}}</h4>
+  <h5>{{resdata.gender}}</h5>
+  <h6>{{resdata.status}}</h6>
+</div> -->
+
+
+<!-- <form>
+
+  <div class="form-outline mb-4">
+    <input type="text" name="namr" class="form-control"
+      placeholder="Name" [(ngModel)]="name"/>
+    <label class="form-label" for="form2Example11">name</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="email" name="namr" class="form-control"
+      placeholder="email address" [(ngModel)]="email"/>
+    <label class="form-labe1" for="form2Example11">email</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="text" name="gender" class="form-control" placeholder="gender" [(ngModel)]="gender"/>
+    <label class="form-label" for="form2Example22">gender</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="text" name="status" class="form-control" placeholder="status" [(ngModel)]="status"/>
+    <label class="form-label" for="form2Example22">status</label>
+  </div>
+
+  <div class="text-center pt-1 mb-5 pb-1">
+    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 m-3 p-2" type="button" (click)="postdata()">submit</button>
+  </div>
+
+</form> -->
+
+
+<!-- <div>
+  <h3>{{data.Accept}}</h3>
+  <h4>{{data.Accept-Encoding}}</h4>
+  <h5>{{data.Accept-Language}}</h5>
+</div> -->
+
+<form>
+
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control" name="name" placeholder="Name" [(ngModel)]="name"/>
+    <label class="form-label">Name</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control" name="description" placeholder="Description" [(ngModel)]="description"/>
+    <label class="form-labe1">Description</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control" name="vehicle_class" placeholder="Vehicle Class" [(ngModel)]="vehicle_class"/>
+    <label class="form-label">Vehicle Class</label>
+  </div>
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control" name="length" placeholder="Lenght" [(ngModel)]="length"/>
+    <label class="form-label">Length</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <input type="text" class="form-control" name="pilot" placeholder="pilot" [(ngModel)]="pilot"/>
+    <label class="form-label">pilot</label>
+  </div>
+
+  <div class="text-center pt-1 mb-5 pb-1">
+    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 m-3 p-2" type="button" (click)="vehicledata()">submit</button>
+  </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+<app-footer></app-footer>

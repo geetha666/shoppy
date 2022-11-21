@@ -1,0 +1,10 @@
+.hd-logo img {width: 100px;}
+.navbar-collapse {justify-content: space-around;}
+.form-control {width:75%;border-radius:0;vertical-align: middle;}
+.btn {width:25%;border-radius: 0;background-color: #6097ff;}
+.btn:hover {background-color: #e330ff;}
+.navbar-collapse .navbar-nav a.nav-link:hover, .navbar-collapse .navbar-nav a.nav-link:active {color:#e330ff !important;}
+.dropdown-item:focus, .dropdown-item:hover {
+    background-color: #6097ff;
+    color: #fff;
+}

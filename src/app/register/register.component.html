@@ -1,0 +1,156 @@
+
+
+
+
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <!-- <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center">
+                  <img src="./assets/images/logo-img.png"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                </div>
+
+                <form>
+                  <p>Please login to your account</p>
+
+                  <div class="form-outline mb-4">
+                    <input type="email" name="namr" class="form-control"
+                      placeholder="Phone number or email address" [(ngModel)]="name"/>
+                    <label class="form-label" for="form2Example11">Username</label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" name="pass" class="form-control" [(ngModel)]="password"/>
+                    <label class="form-label" for="form2Example22">Password</label>
+                  </div>
+
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 m-3 p-2" type="button" (click)="loginpage()">Log
+                      in</button>
+                    <a class="text-muted" href="#!">Forgot password?</a>
+                  </div>
+
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">Don't have an account?</p>
+                    <button type="button" class="btn btn-outline-primary">Create new</button>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <h4 class="mb-4">We are more than just a company</h4>
+                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+ 
+  <div class="mb-2">
+    <label for="firstname" class="m-2">First Name </label>
+    <input type="text" id="firstname" name="firstname" formControlName="firstname">   
+  <div style="color: red;"
+  *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)">
+  <div [hidden]="!firstname.errors.required">
+    First Name is required
+  </div>
+  <div [hidden]="!firstname.errors.minlength">
+    Min Length is 10
+  </div>
+</div>
+</div>
+
+
+
+  <div class="mb-2">
+    <label for="lastname" class="m-2">Last Name </label>
+    <input type="text" id="lastname" name="lastname" formControlName="lastname">
+
+    <div *ngIf="!lastname.valid && (lastname.dirty ||lastname.touched)"> 
+      <div [hidden]="!lastname.errors.pattern">
+        Only characters are allowed
+      </div>
+      <div [hidden]="!lastname.errors.maxLength">
+        Max length allowed is {{lastname.errors.maxlength?.requiredLength}} 
+      </div>
+      <div [hidden]="!lastname.errors.required">
+        Last Name is required
+      </div>
+    </div>
+  </div>
+ 
+  <div class="mb-2">
+    <label for="email" class="m-2">Email </label>
+    <input type="text" id="email" name="email" formControlName="email">
+    <div *ngIf="!email.valid && (email.dirty ||email.touched)">
+      <div [hidden]="!email.errors.required">
+        email is required
+      </div>
+      <div [hidden]="!email.errors.email">
+        invalid email id
+      </div>
+    </div>
+  </div>
+ 
+  <div class="mb-2">
+    <label for="gender" class="m-2">Geneder </label>
+    <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+    <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+    <div *ngIf="!gender.valid && (gender.dirty ||gender.touched)">
+      <div [hidden]="!gender.errors.required">
+        gender is required
+      </div>
+    </div>
+  </div>
+ 
+  <div class="mb-2">
+    <label for="isMarried" class="m-2">Married </label>
+    <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
+    <div *ngIf="!isMarried.valid && (isMarried.dirty ||isMarried.touched)">
+      <div [hidden]="!isMarried.errors.required">
+        isMarried is required
+      </div>
+    </div>
+    </div>
+ 
+ 
+  <div class="mb-2">
+    <label for="country" class="m-2">country </label>
+    <select id="country" name="country" formControlName="country">
+      <option value="1">India</option>
+      <option value="2">USA</option>
+      <option value="3">England</option>
+      <option value="4">Singapore</option>
+    </select>
+    <div *ngIf="!country.valid && (country.dirty ||country.touched)">
+      <div [hidden]="!country.errors.required">
+        country is required
+      </div>
+    </div>
+  </div>
+
+ 
+  <div>
+    <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+  </div>
+ 
+</form>
+
+  </div>
+</section>
